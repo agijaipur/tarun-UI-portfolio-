@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Mail, Send, MapPin, Phone, Linkedin, Dribbble, Github, Twitter } from 'lucide-react';
+import { Mail, Send, MapPin, Phone } from 'lucide-react';
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -64,7 +64,7 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center shadow-sm text-purple-600 dark:text-purple-400">
                   <MapPin size={20} />
@@ -78,17 +78,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="flex gap-4">
-              {[<Linkedin />, <Dribbble />, <Github />, <Twitter />].map((icon, i) => (
-                <a 
-                  key={i} 
-                  href="#" 
-                  className="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white transition-all shadow-sm"
-                >
-                  {React.cloneElement(icon as React.ReactElement, { size: 18 })}
-                </a>
-              ))}
-            </div>
+
           </motion.div>
 
           <motion.div
@@ -113,7 +103,7 @@ const Contact = () => {
                   placeholder="John Doe"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                   Email Address
@@ -129,7 +119,7 @@ const Contact = () => {
                   placeholder="john@example.com"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                   Message
@@ -149,11 +139,10 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 rounded-xl font-bold text-white flex items-center justify-center gap-2 transition-all ${
-                  isSubmitted 
-                    ? 'bg-green-500' 
-                    : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-lg hover:shadow-blue-500/25'
-                }`}
+                className={`w-full py-4 rounded-xl font-bold text-white flex items-center justify-center gap-2 transition-all ${isSubmitted
+                  ? 'bg-green-500'
+                  : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-lg hover:shadow-blue-500/25'
+                  }`}
               >
                 {isSubmitting ? (
                   <span className="animate-pulse">Sending...</span>
@@ -168,8 +157,8 @@ const Contact = () => {
             </form>
           </motion.div>
         </div>
-      </div>
-    </section>
+      </div >
+    </section >
   );
 };
 
