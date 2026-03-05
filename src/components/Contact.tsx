@@ -77,18 +77,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
-            <div className="flex gap-4">
-              {[<Linkedin />, <Dribbble />, <Github />, <Twitter />].map((icon, i) => (
-                <a 
-                  key={i} 
-                  href="#" 
-                  className="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white transition-all shadow-sm"
-                >
-                  {React.cloneElement(icon as React.ReactElement, { size: 18 })}
-                </a>
-              ))}
-            </div>
           </motion.div>
 
           <motion.div
